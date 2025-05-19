@@ -2,12 +2,6 @@ pipeline {
     agent any
 
     stages {
-        stage('Clone Repository') {
-            steps {
-                git credentialsId: 'github-creds', url: 'https://github.com/rubeldm2010/workspace_playwright_pytest.git'
-            }
-        }
-
         stage('Set Up Python Environment') {
             steps {
                 sh '''
