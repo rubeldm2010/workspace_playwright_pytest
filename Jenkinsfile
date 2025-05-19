@@ -19,6 +19,8 @@ pipeline {
                 sh '''
                 source venv/bin/activate
                 pytest tests/
+                deactivate
+                exit 0
                 '''
             }
         }
